@@ -1,6 +1,10 @@
 import Map from '../Map/Map';
 import '../ClientInfo/ClientInfo.css';
+<<<<<<< HEAD
 //import TranscriptSection from '../TranscriptSection/TranscriptSection';
+=======
+import TranscriptSection from '../TranscriptSection/TranscriptSection';
+>>>>>>> Added a new notepad component. Needs css done and needs a submit button and some other items to save notes to a database.
 import NotePad from '../Notepad/Notepad';
 
 export default function ClientInfo() {

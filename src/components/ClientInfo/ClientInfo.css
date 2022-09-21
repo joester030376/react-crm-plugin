@@ -21,6 +21,12 @@
     margin-top: 5px;
 }
 
+.notepadSection {
+    height: 40vh;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
 .sectionTitles {
     background-color: grey;
     font-size: 2em;
