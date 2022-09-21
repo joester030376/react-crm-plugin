@@ -15,8 +15,14 @@
 }
 
 .transcriptSection {
-    height: 65vh;
+    height: 40vh;
     border: 1px solid black;   
+    margin-top: 5px;
+}
+
+.notepadSection {
+    height: 40vh;
+    border: 1px solid black;
     margin-top: 5px;
 }
 

@@ -1,6 +1,7 @@
 import Map from '../Map/Map';
 import '../ClientInfo/ClientInfo.css';
 import TranscriptSection from '../TranscriptSection/TranscriptSection';
+import NotePad from '../Notepad/Notepad';
 
 export default function ClientInfo() {
 
@@ -23,7 +24,10 @@ export default function ClientInfo() {
                     <h1 className="sectionTitles">Past Transcripts</h1>
                 </div>
             </div>
-            
+            <div className="notepadSection">
+                <h1 className="sectionTitles">Notepad</h1>
+                <NotePad />
+            </div>            
         </div>  
     );
 };
