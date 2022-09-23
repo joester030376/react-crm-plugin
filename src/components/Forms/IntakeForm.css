@@ -1,7 +1,10 @@
 .intake-form-style {
     background-color: white;
     border: 1px solid black;
+<<<<<<< HEAD
     margin-top: 20px;
+=======
+>>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
     padding: 5px;    
 }
 
@@ -16,6 +19,7 @@
     margin: auto;
 }
 
+<<<<<<< HEAD
 .label-heading {
     margin-top: 20px;
 }
@@ -24,4 +28,9 @@
     width: 30%;
     margin: auto;
     margin-top: 30px;
+=======
+.submit-button {
+    width: 30%;
+    margin: auto;
+>>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
 }
