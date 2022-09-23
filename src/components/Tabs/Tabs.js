@@ -1,6 +1,7 @@
 import { Box, Tab, Tabs, Typography } from '@mui/material';
 import { useState } from 'react';
 import ClientInfo from '../ClientInfo/ClientInfo';
+import IntakeForm from '../Forms/IntakeForm';
 
 
 function TabMenu() {
@@ -29,12 +30,22 @@ function TabMenu() {
                 )}
                 {tabIndex === 1 && (
                 <Box>
-                    <Typography>The second tab</Typography>
+                    <IntakeForm />
                 </Box>
                 )}
                 {tabIndex === 2 && (
                 <Box>
-                    <Typography>The third tab</Typography>
+                    <Typography>Resources Under Development</Typography>
+                </Box>
+                )}
+                {tabIndex === 3 && (
+                <Box>
+                    <Typography>Calendar Under Development</Typography>
+                </Box>
+                )}
+                {tabIndex === 4 && (
+                <Box>
+                    <Typography>News and Announcements Under Development</Typography>
                 </Box>
                 )}
             </Box>

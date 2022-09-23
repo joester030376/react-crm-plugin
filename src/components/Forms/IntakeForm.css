@@ -1,0 +1,21 @@
+.intake-form-style {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;    
+}
+
+.intake-title {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.line-break {
+    border: 2px solid black;
+    width: 50%;
+    margin: auto;
+}
+
+.submit-button {
+    width: 30%;
+    margin: auto;
+}
