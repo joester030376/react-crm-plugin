@@ -20,10 +20,14 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added handlers for value changes in each of the fields.
 .label-heading {
     margin-top: 20px;
 }
 
+<<<<<<< HEAD
 .submit-button {
     width: 30%;
     margin: auto;
@@ -33,4 +37,10 @@
     width: 30%;
     margin: auto;
 >>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
+=======
+.submit-button {
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+>>>>>>> Added handlers for value changes in each of the fields.
 }

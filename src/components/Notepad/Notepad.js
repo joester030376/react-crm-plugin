@@ -8,8 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 =======
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
+<<<<<<< HEAD
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 >>>>>>> Added a new notepad component. Needs css done and needs a submit button and some other items to save notes to a database.
+=======
+//import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+>>>>>>> Added handlers for value changes in each of the fields.
 
 
 export default function NotePad() {

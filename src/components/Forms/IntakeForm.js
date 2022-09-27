@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Forms/IntakeForm.css';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Counter used to determine if all form input boxes are valid.
 let trueCounter = 0;
 
@@ -151,20 +152,135 @@ const initialValues = {
     Children: '',
     AssitanceType: ''
 };
-
-
+=======
 export default function IntakeForm() {
+    let firstNameValid = false;
+    let lastNameValid = false;
+    let emailAddressValid = false;
+    let phoneNumberValid = false;
+    let bestContactMethodValid = false;
+    let clientAddressValid = false;
+    let clientCityValid = false;
+    let clientStateValid = false;
+    let clientZipCodeValid = false;
+    let birthMonthValid = false;
+    let birthDayValid = false;
+    let birthYearValid = false;
+    let genderValid = false;
+    let occupationValid = false;
+    let reasonForContactValid = false;
+    let policeReportFiledValid = false;
+>>>>>>> Added handlers for value changes in each of the fields.
 
-    const [values, setValues] = useState(initialValues);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [emailAddress, setEmailAddress] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [bestContactMethod, setBestContactMethod] = useState('Phone Call');
+    const [clientAddress, setClientAddress] = useState('');
+    const [clientCity, setClientCity] = useState('');
+    const [clientState, setClientState] = useState('');
+    const [clientZipCode, setClientZipCode] = useState('');
+    const [country, setCountry] = useState('US');
+    const [dateOfBirth, setDateOfBirth] = useState('');
+    const [birthMonth, setBirthMonth] = useState('');
+    const [birthDay, setBirthDay] = useState(''); 
+    const [birthYear, setBirthYear] = useState('');
+    const [gender, setGender] = useState('Male');
+    const [occupation, setOccupation] = useState('');
+    const [reasonForContact, setReasonForContact] = useState('Contemplating Suicide');
+    const [policeReportFiled, setPoliceReportFiled] = useState('Yes');
+    const [children, setChildren] = useState('Yes');
+    const [assitanceType, setAssistanceType] = useState('null');      
+
+    const handleFirstNamechange = (e) => {  
+        setFirstName(e.target.value);        
+    }
+
+    const handleLastNameChange = (e) => {       
+        setLastName(e.target.value);
+    }
+
+    const handleEmailChange = (e) => {      
+        setEmailAddress(e.target.value);
+    }
+
+    const handlePhoneNumberChange = (e) => {a
+        setPhoneNumber(e.target.value);
+    }
+
+    const handleBestContactMethod = (e) => {
+        setBestContactMethod(e.target.value);
+    }
+
+    const handleClientAddress = (e) => {
+        setClientAddress(e.target.value);
+    }
+
+    const handleClientCity = (e) => {
+        setClientCity(e.target.value);
+    }
+
+    const handleClientState = (e) => {
+        setClientState(e.target.value);
+    }
+
+    const handleClientZipCode = (e) => {
+        setClientZipCode(e.target.value);
+    }
+
+    const handleBirthMonth = (e) => {
+        setBirthMonth(e.target.value);
+    }
+
+    const handleBirthDay = (e) => {
+        setBirthDay(e.target.value);
+    }
+
+    const handleBirthYear = (e) => {
+        setBirthYear(e.target.value);
+    }
+
+    const handleGender = (e) => {
+        setGender(e.target.value);
+    }
+
+    const handleOccupation = (e) => {
+        setOccupation(e.target.value);
+    }
+
+    const handleReasonForContact = (e) => {
+        setReasonForContact(e.target.value);
+    }
+
+    const handlePoliceReportFiled = (e) => {
+        setPoliceReportFiled(e.target.value);
+    }
+
+    const handleHasChildren = (e) => {
+        setChildren(e.target.value);
+    }
+
+    const intakeFormSubmission = (e) => {
+
+        e.preventDefault();
+    }
 
     return(
+<<<<<<< HEAD
         <Form>
 >>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
+=======
+        <Form onSubmit={intakeFormSubmission}>
+>>>>>>> Added handlers for value changes in each of the fields.
             <div className="intake-form-style">
                 <div>
                     <h1 className="intake-title">Intake Form</h1>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added handlers for value changes in each of the fields.
                 <br className="line-break" />
             
                 <Form.Group>
@@ -175,7 +291,11 @@ export default function IntakeForm() {
                                 type="input"
                                 name="firstname"
                                 value={firstName}
+<<<<<<< HEAD
                                 onChange={handleFirstNameChange}
+=======
+                                onChange={firstName }
+>>>>>>> Added handlers for value changes in each of the fields.
                             />
                         </Col>
                         <Col>
@@ -184,7 +304,12 @@ export default function IntakeForm() {
                                 type="input"
                                 name="lastname"
                                 value={lastName}
+<<<<<<< HEAD
                                 onChange={handleLastNameChange}                            
+=======
+                                onChange={handleLastNameChange}
+                            
+>>>>>>> Added handlers for value changes in each of the fields.
                             />
                         </Col>
                     </Row>                         
@@ -447,6 +572,7 @@ export default function IntakeForm() {
                         </Col>                            
                     </Row>  
                 </Form.Group> 
+<<<<<<< HEAD
 =======
             <br className="line-break" />
             <Row>
@@ -613,12 +739,15 @@ export default function IntakeForm() {
                 </Col>                            
             </Row>  
 >>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
+=======
+>>>>>>> Added handlers for value changes in each of the fields.
             </div> 
             <Row className="submit-button">
                 <Button variant="primary" type="submit">Submit Form</Button> 
             </Row>                                            
         </Form>
     );   
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ////////////////////////////////////////////////////////////////////
@@ -674,3 +803,7 @@ function checkYear(year) {
 =======
 >>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
 }
+=======
+}
+
+>>>>>>> Added handlers for value changes in each of the fields.

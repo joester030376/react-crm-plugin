@@ -1,10 +1,14 @@
 import Map from '../Map/Map';
 import '../ClientInfo/ClientInfo.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import TranscriptSection from '../TranscriptSection/TranscriptSection';
 =======
 import TranscriptSection from '../TranscriptSection/TranscriptSection';
 >>>>>>> Added a new notepad component. Needs css done and needs a submit button and some other items to save notes to a database.
+=======
+// import TranscriptSection from '../TranscriptSection/TranscriptSection';
+>>>>>>> Added handlers for value changes in each of the fields.
 import NotePad from '../Notepad/Notepad';
 
 export default function ClientInfo() {
@@ -20,10 +24,15 @@ export default function ClientInfo() {
                     <p>Client Phone:</p>
                     <p>Client ZipCode:</p>
                     <p>Previous Contact:</p>
+<<<<<<< HEAD
                 </div> 
                 <div>
                     <Map />   
                 </div>                          
+=======
+                </div>  
+                <Map />             
+>>>>>>> Added handlers for value changes in each of the fields.
             </div>
             <div className="transcriptSection">
                 <div>
