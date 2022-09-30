@@ -1,6 +1,6 @@
 import Map from '../Map/Map';
 import '../ClientInfo/ClientInfo.css';
-// import TranscriptSection from '../TranscriptSection/TranscriptSection';
+//import TranscriptSection from '../TranscriptSection/TranscriptSection';
 import NotePad from '../Notepad/Notepad';
 
 export default function ClientInfo() {
@@ -16,8 +16,10 @@ export default function ClientInfo() {
                     <p>Client Phone:</p>
                     <p>Client ZipCode:</p>
                     <p>Previous Contact:</p>
-                </div>  
-                <Map />             
+                </div> 
+                <div>
+                    <Map />   
+                </div>                          
             </div>
             <div className="transcriptSection">
                 <div>

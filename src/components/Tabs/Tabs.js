@@ -13,7 +13,7 @@ function TabMenu() {
 
     return (
         <Box>
-            <Box>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: '#509CFA', boxShadow: 2, position: 'fixed', width: 1 }}>
                 <Tabs value={tabIndex} onChange={handleTabChange}>
                     <Tab label="Client Info" />
                     <Tab label="Forms" />

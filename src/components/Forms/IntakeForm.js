@@ -6,24 +6,12 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Forms/IntakeForm.css';
 
-export default function IntakeForm() {
-    let firstNameValid = false;
-    let lastNameValid = false;
-    let emailAddressValid = false;
-    let phoneNumberValid = false;
-    let bestContactMethodValid = false;
-    let clientAddressValid = false;
-    let clientCityValid = false;
-    let clientStateValid = false;
-    let clientZipCodeValid = false;
-    let birthMonthValid = false;
-    let birthDayValid = false;
-    let birthYearValid = false;
-    let genderValid = false;
-    let occupationValid = false;
-    let reasonForContactValid = false;
-    let policeReportFiledValid = false;
+// Counter used to determine if all form input boxes are valid.
+let trueCounter = 0;
 
+export default function IntakeForm() {    
+     
+    // Use state for input boxes.
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [emailAddress, setEmailAddress] = useState('');
@@ -45,8 +33,9 @@ export default function IntakeForm() {
     const [children, setChildren] = useState('Yes');
     const [assitanceType, setAssistanceType] = useState('null');      
 
-    const handleFirstNamechange = (e) => {  
-        setFirstName(e.target.value);        
+    
+    const handleFirstNameChange = (e) => {  
+        setFirstName(e.target.value);              
     }
 
     const handleLastNameChange = (e) => {       
@@ -57,7 +46,7 @@ export default function IntakeForm() {
         setEmailAddress(e.target.value);
     }
 
-    const handlePhoneNumberChange = (e) => {a
+    const handlePhoneNumberChange = (e) => {
         setPhoneNumber(e.target.value);
     }
 
@@ -115,7 +104,29 @@ export default function IntakeForm() {
 
     const intakeFormSubmission = (e) => {
 
+        trueCounter = 0;
+
         e.preventDefault();
+
+        // Checks the validity of all input text boxes.
+        checkValidity(/^[a-zA-Z]+/g.test(firstName));
+        checkValidity(/^[a-zA-Z]+/g.test(lastName));
+        checkValidity(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(emailAddress));
+        checkValidity(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phoneNumber));
+        checkValidity(/^[#.0-9a-zA-Z\s,-]+$/g.test(clientAddress));
+        checkValidity(/^[a-zA-Z]+/g.test(clientCity));
+        checkValidity(/^[a-zA-Z]+/g.test(clientState));
+        checkValidity(/(^\d{5}$)|(^\d{5}-\d{4}$)/g.test(clientZipCode));
+        checkMonth(birthMonth);
+        checkDay(birthDay);
+        checkYear(birthYear);
+        checkValidity(/^[#.0-9a-zA-Z\s,-]+$/g.test(occupation));
+
+        if (trueCounter === 12) {
+           console.log("true:" + trueCounter);
+        } else {
+            console.log("false:" + trueCounter);
+        }
     }
 
     return(
@@ -134,7 +145,7 @@ export default function IntakeForm() {
                                 type="input"
                                 name="firstname"
                                 value={firstName}
-                                onChange={firstName }
+                                onChange={handleFirstNameChange}
                             />
                         </Col>
                         <Col>
@@ -143,8 +154,7 @@ export default function IntakeForm() {
                                 type="input"
                                 name="lastname"
                                 value={lastName}
-                                onChange={handleLastNameChange}
-                            
+                                onChange={handleLastNameChange}                            
                             />
                         </Col>
                     </Row>                         
@@ -414,4 +424,54 @@ export default function IntakeForm() {
         </Form>
     );   
 }
+////////////////////////////////////////////////////////////////////
+// VALILDATION FUNCTIONS FOR FORM                                //
+///////////////////////////////////////////////////////////////////
 
+// Checks for regex true or false and then increments or decrements the counter.
+
+// Check all text fields for text only output.
+function checkValidity(testInputValidity) {
+    if(testInputValidity) {
+        trueCounter += 1;
+    }    
+}
+
+function checkMonth(month) {
+    if (!/^[0-9\b]+$/.test(month)) {
+        return false;
+    } else {
+        const value = parseInt(month, 10);
+        if (value < 1 || value > 12) {
+            return false;
+        } else {
+            trueCounter += 1
+        }
+    }
+}
+
+function checkDay(day) {
+    if (!/^[0-9]*$/g.test(day)) {
+        return false;
+    } else {
+        const value = parseInt(day, 10);
+        if (value < 1 || value > 31) {
+            return false;
+        } else {
+            trueCounter += 1
+        }
+    }
+}
+
+function checkYear(year) {
+    if (!/^[0-9]*$/g.test(year)) {
+        return false;
+    } else {
+        const value = parseInt(year, 10);
+        if (value < 1935 || value > 2022) {
+            return false;
+        } else {
+            trueCounter += 1
+        }
+    }
+}

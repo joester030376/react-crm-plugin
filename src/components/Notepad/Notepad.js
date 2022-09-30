@@ -1,25 +1,38 @@
 import React, { useState } from 'react';
-import { EditorState } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
-//import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function NotePad() {
 
-    const [editorState, setEditorState] = useState(
-        () => EditorState.createEmpty(),
-    );
+    const [clientNotes, setClientNotes] = useState('');
 
-    const onEditorStateChange = (editorState) => {
-        setEditorState(editorState);
+    const handleClientNotes = (e) => {
+        setClientNotes(e.target.value);
     }
 
+    const submitNotes = (e) => {
+        e.preventDefault();
+    }
+
+
     return(
-        <div>
-            <Editor 
-                editorState={editorState}
-                onEditorStateChange={onEditorStateChange}
-            />
-        </div>
+        <Form onSubmit={submitNotes}>
+            <Row>
+                <Form.Group>
+                    <Form.Control 
+                        as="textarea" rows={10}
+                        value={clientNotes}
+                        onChange={handleClientNotes}
+                    />
+                </Form.Group>
+            </Row>
+            <Row className="submit-button">
+                <Button variant="primary" type="submit">Submit Notes</Button> 
+            </Row>  
+        </Form>
     );
 }

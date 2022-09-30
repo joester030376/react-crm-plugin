@@ -1,6 +1,5 @@
 import React from 'react';
 import TabMenu from '../Tabs/Tabs';
-import ClientInfo from '../ClientInfo/ClientInfo';
 import '../AgentView/AgentView.css';
 
 function AgentView() {
