@@ -1,14 +1,7 @@
 .intake-form-style {
     background-color: white;
     border: 1px solid black;
-<<<<<<< HEAD
-<<<<<<< HEAD
     margin-top: 20px;
-=======
->>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
-=======
-    margin-top: 20px;
->>>>>>> Made an intake form with a simple validation check before submission to the database.
     padding: 5px;    
 }
 
@@ -23,28 +16,12 @@
     margin: auto;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Added handlers for value changes in each of the fields.
 .label-heading {
     margin-top: 20px;
 }
 
-<<<<<<< HEAD
 .submit-button {
     width: 30%;
     margin: auto;
     margin-top: 30px;
-=======
-.submit-button {
-    width: 30%;
-    margin: auto;
->>>>>>> Added Intake Form framework. Still needs validation and submission code to the repository.
-=======
-.submit-button {
-    width: 30%;
-    margin: auto;
-    margin-top: 30px;
->>>>>>> Added handlers for value changes in each of the fields.
 }

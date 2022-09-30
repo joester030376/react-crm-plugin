@@ -1,18 +1,8 @@
 import Map from '../Map/Map';
 import '../ClientInfo/ClientInfo.css';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 //import TranscriptSection from '../TranscriptSection/TranscriptSection';
-=======
 import TranscriptSection from '../TranscriptSection/TranscriptSection';
->>>>>>> Added a new notepad component. Needs css done and needs a submit button and some other items to save notes to a database.
-=======
-// import TranscriptSection from '../TranscriptSection/TranscriptSection';
->>>>>>> Added handlers for value changes in each of the fields.
-=======
-//import TranscriptSection from '../TranscriptSection/TranscriptSection';
->>>>>>> Made an intake form with a simple validation check before submission to the database.
+
 import NotePad from '../Notepad/Notepad';
 
 export default function ClientInfo() {
@@ -28,21 +18,10 @@ export default function ClientInfo() {
                     <p>Client Phone:</p>
                     <p>Client ZipCode:</p>
                     <p>Previous Contact:</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Made an intake form with a simple validation check before submission to the database.
                 </div> 
                 <div>
                     <Map />   
                 </div>                          
-<<<<<<< HEAD
-=======
-                </div>  
-                <Map />             
->>>>>>> Added handlers for value changes in each of the fields.
-=======
->>>>>>> Made an intake form with a simple validation check before submission to the database.
             </div>
             <div className="transcriptSection">
                 <div>
